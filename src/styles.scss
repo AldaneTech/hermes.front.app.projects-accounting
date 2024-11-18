@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* En tu archivo de estilos globales o CSS de un componente específico */
+
+body {
+  margin: 0;
+  padding-top: 55px; /* Ajusta esto según la altura de tu barra de navegación */
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

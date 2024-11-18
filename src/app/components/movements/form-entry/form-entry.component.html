@@ -1,0 +1,57 @@
+<p-dialog header="Formulario" [(visible)]="display" modal="modal" [style]="{ 'height': '500px', 'width': '600px' }" [closeOnEscape]="false" [dismissableMask]="false">
+    <div>
+      <form (ngSubmit)="submitForm()">
+        <div>
+          <label for="name">Cantidad:</label>
+          <input id="amount" type="number" [(ngModel)]="amount" name="amount" required />
+        </div>
+        <div>
+            <label for="name">Descripción:</label>
+            <input id="description" type="text" [(ngModel)]="description" name="description" required />
+        </div>
+        <div>
+            <label for="name">Fecha:</label>
+            <input id="date" type="date" [(ngModel)]="date" name="date" required />
+        </div>
+        <p-dropdown 
+            [options]="categories" 
+            [(ngModel)]="selectedCategory" 
+            placeholder="Selecciona una categoría"
+            filter="true"
+            [filterBy]="'name'"
+            optionLabel="name"
+            [ngModelOptions]="{standalone: true}"
+            [showClear]="false"
+            [style]="{'width':'100%'}"
+            class="custom-dropdown">
+        </p-dropdown>
+        <p-dropdown 
+            [options]="brands" 
+            [(ngModel)]="selectedBrand" 
+            placeholder="Selecciona una categoría"
+            filter="true"
+            [ngModelOptions]="{standalone: true}"
+            [filterBy]="'name'"
+            optionLabel="name"
+            [showClear]="false"
+            [style]="{'width':'100%'}"
+            class="custom-dropdown">
+        </p-dropdown>
+        <p-dropdown 
+            [options]="stores" 
+            [(ngModel)]="selectedStore" 
+            placeholder="Selecciona una categoría"
+            filter="true"
+            [ngModelOptions]="{standalone: true}"
+            [filterBy]="'name'"
+            optionLabel="name"
+            [showClear]="false"
+            [style]="{'width':'100%'}"
+            class="custom-dropdown">
+        </p-dropdown>
+        <button type="submit">Enviar</button>
+        <button type="button" (click)="closeDialog()">Cerrar</button>
+      </form>
+    </div>
+  </p-dialog>
+  <p-button label="Añadir movimiento" (click)="addAccountEntry()" icon="pi pi-plus"></p-button>

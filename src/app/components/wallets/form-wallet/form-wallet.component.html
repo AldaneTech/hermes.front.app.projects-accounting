@@ -1,0 +1,13 @@
+<p-dialog header="Formulario" [(visible)]="display" modal="modal" [closeOnEscape]="false" [dismissableMask]="false">
+  <div>
+    <form (ngSubmit)="submitForm()">
+      <div>
+        <label for="name">Nombre de la cartera:</label>
+        <input id="name" type="text" [(ngModel)]="walletName" name="walletName" required />
+      </div>
+      <button type="submit">Enviar</button>
+      <button type="button" (click)="closeDialog()">Cerrar</button>
+    </form>
+  </div>
+</p-dialog>
+<p-button label="Crear cartera" (click)="showDialog()" icon="pi pi-plus"></p-button>

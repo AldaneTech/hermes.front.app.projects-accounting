@@ -1,0 +1,49 @@
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: #00a5f2;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+  
+.navbar-logo {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.icono {
+  width: 40px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-right: 1.5rem;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-menu li a:hover {
+  text-decoration: underline;
+}

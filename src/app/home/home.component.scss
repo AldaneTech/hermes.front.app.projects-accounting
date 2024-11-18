@@ -1,0 +1,11 @@
+/* En tu archivo de estilos global o en el CSS específico del componente */
+
+.container {
+    display: flex;
+    flex-direction: column; /* Esto alineará los componentes en columnas */
+}
+
+app-navbar, app-wallets {
+    flex: 0 0 auto; /* Asegúrate de que cada componente no crezca ni se encoja */
+    width: 100%; /* O cualquier ancho que necesites */
+}
