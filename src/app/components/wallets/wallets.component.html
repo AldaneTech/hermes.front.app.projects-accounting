@@ -11,7 +11,7 @@
         class="custom-dropdown"
         (onChange)="onWalletChange($event)">
     </p-dropdown>
-    <app-form-wallet (walletCreated)="walletCreated($event)"></app-form-wallet>
+    <app-form-wallet [wallet]="selectedWallet" (walletCreated)="walletCreated($event)"></app-form-wallet>
     <div class="estadisticas" *ngIf="selectedWallet">
         <div class="balance">
             <img src="../../../assets/dinero.png" width="50px">
@@ -33,5 +33,5 @@
     </div>
 </div>
 
-<app-movements class="app-movements" [wallet]="selectedWallet" (refreshWallet)="refreshWallet()"></app-movements>
+<app-movements class="app-movements" [wallet]="selectedWallet" (refreshWallet)="refreshWallet()" *ngIf="selectedWallet"></app-movements>
 

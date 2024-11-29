@@ -1,0 +1,17 @@
+<p-dialog header="Formulario" [(visible)]="display" modal="modal" [style]="{ 'height': '500px', 'width': '600px' }" [closeOnEscape]="false" [dismissableMask]="false">
+    <div>
+      <form (ngSubmit)="submitForm()">
+        <div>
+          <label for="name">Nombre:</label>
+          <input id="name" type="text" [(ngModel)]="name" name="name" required />
+        </div>
+        <div>
+            <label for="comment">Descripción:</label>
+            <input id="comment" type="text" [(ngModel)]="comment" name="comment" required />
+        </div>
+        <button type="submit">Enviar</button>
+        <button type="button" (click)="closeDialog()">Cerrar</button>
+      </form>
+    </div>
+  </p-dialog>
+  <p-button label="Añadir categoría" (click)="addCategory()" icon="pi pi-plus"></p-button>

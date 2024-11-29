@@ -11,3 +11,5 @@
   </div>
 </p-dialog>
 <p-button label="Crear cartera" (click)="showDialog()" icon="pi pi-plus"></p-button>
+<p-button (click)="editWallet()" *ngIf="wallet" class="editButton" class="editButton" icon="pi pi-pencil" [style]="{'background-color': ' #61ca36', 'border-color':' #61ca36'}" ></p-button>
+<p-button (click)="deleteWallet()" icon="pi pi-trash" class="deleteButton" [style]="{'background-color': 'red', 'border-color':'red'}"></p-button>

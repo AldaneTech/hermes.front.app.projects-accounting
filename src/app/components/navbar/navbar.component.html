@@ -2,9 +2,10 @@
     <div class="navbar-container">
       <!-- <a href="#" class="navbar-logo"><img src="../../../assets/icono.png" class="icono"></a> -->
       <ul class="navbar-menu">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Acerca de</a></li>
-        <li><a href="#">Servicios</a></li>
+        <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
+        <li><a routerLink="/categories" routerLinkActive="active">Categorías</a></li>
+        <li><a routerLink="/stores" routerLinkActive="active">Tiendas</a></li>
+        <li><a routerLink="/brands" routerLinkActive="active">Marcas</a></li>
         <li><a href="#" (click)="logout()">Cerrar sesión</a></li>
       </ul>
     </div>

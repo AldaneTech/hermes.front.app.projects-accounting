@@ -17,7 +17,13 @@ import { DialogModule } from 'primeng/dialog';
 import { TableModule } from 'primeng/table';
 import { FormWalletComponent } from './components/wallets/form-wallet/form-wallet.component';
 import { MovementsComponent } from './components/movements/movements.component';
-import { FormEntryComponent } from './components/movements/form-entry/form-entry.component'; // Importar el módulo de diálogo
+import { FormEntryComponent } from './components/movements/form-entry/form-entry.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { StoresComponent } from './components/stores/stores.component';
+import { BrandsComponent } from './components/brands/brands.component';
+import { FormBrandComponent } from './components/brands/form-brand/form-brand.component';
+import { FormStoreComponent } from './components/stores/form-store/form-store.component';
+import { FormCategoryComponent } from './components/categories/form-category/form-category.component'; // Importar el módulo de diálogo
 
 @NgModule({
   declarations: [
@@ -28,7 +34,13 @@ import { FormEntryComponent } from './components/movements/form-entry/form-entry
     WalletsComponent,
     FormWalletComponent,
     MovementsComponent,
-    FormEntryComponent
+    FormEntryComponent,
+    CategoriesComponent,
+    StoresComponent,
+    BrandsComponent,
+    FormBrandComponent,
+    FormStoreComponent,
+    FormCategoryComponent
   ],
   imports: [
     BrowserModule,
