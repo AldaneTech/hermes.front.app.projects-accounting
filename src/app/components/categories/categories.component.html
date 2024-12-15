@@ -1,4 +1,4 @@
-<div [style]="{'width':'60%', 'margin':'auto'}">
+<div class="table">
     <p-table [value]="categories" class="table" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="caption">
             <div class="flex align-items-center justify-content-between">
@@ -10,16 +10,16 @@
             <tr>
                 <th>Nombre</th>
                 <th>Comentario</th>
+                <th id="cabecera"></th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-category>
             <tr>
                 <td>{{ category.name }}</td>
                 <td>{{ category.comment }}</td>
-                <td>
+                <td id="botones">
                     <p-button (click)="updateCategory(category)" class="editButton" class="editButton" icon="pi pi-pencil" [style]="{'background-color': ' #61ca36', 'border-color':' #61ca36'}" ></p-button>
                     <p-button (click)="deleteCategory(category)" icon="pi pi-trash" class="deleteButton" [style]="{'background-color': 'red', 'border-color':'red'}"></p-button>
-
                 </td>
             </tr>
         </ng-template>

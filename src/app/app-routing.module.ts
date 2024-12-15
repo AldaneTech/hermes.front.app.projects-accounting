@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] }, // Proteger la ruta raíz
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] }, // Proteger la ruta de categorías
-
   { path: 'categories', component: CategoriesComponent, canActivate: [AuthGuard] }, // Proteger la ruta de categorías
   { path: 'brands', component: BrandsComponent, canActivate: [AuthGuard] }, // Proteger la ruta de marcas
   { path: 'stores', component: StoresComponent, canActivate: [AuthGuard] }, // Proteger la ruta de tiendas
