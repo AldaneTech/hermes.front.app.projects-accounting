@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { User, UserService } from '@daxlto/accounting-api-client-angular';
+import { User, UserService } from '@aldanetech/accounting-api-client-angular';
 import axios from 'axios';
 
 @Component({

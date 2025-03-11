@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AuthInterceptor } from './services/auth.service';
+import { AuthInterceptor } from './services/auth.interceptor';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { DropdownModule } from 'primeng/dropdown';
 import { WalletsComponent } from './components/wallets/wallets.component';

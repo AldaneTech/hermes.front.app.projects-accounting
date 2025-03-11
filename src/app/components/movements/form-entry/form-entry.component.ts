@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { AccountEntry, AccountEntryService, Brand, BrandService, Category, CategoryService, Store, StoreService, Wallet } from '@daxlto/accounting-api-client-angular';
+import { AccountEntry, AccountEntryService, Brand, BrandService, Category, CategoryService, Store, StoreService, Wallet } from '@aldanetech/accounting-api-client-angular';
 
 @Component({
   selector: 'app-form-entry',

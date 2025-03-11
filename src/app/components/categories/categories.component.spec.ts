@@ -1,6 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CategoriesComponent } from './categories.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TableModule } from 'primeng/table';
+import { FormCategoryComponent } from './form-category/form-category.component';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
 
 describe('CategoriesComponent', () => {
   let component: CategoriesComponent;
@@ -8,7 +15,8 @@ describe('CategoriesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CategoriesComponent]
+      declarations: [CategoriesComponent, FormCategoryComponent],
+      imports: [RouterTestingModule, HttpClientTestingModule, TableModule, DialogModule, ButtonModule, FormsModule]
     })
     .compileComponents();
     

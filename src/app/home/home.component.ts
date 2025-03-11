@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Wallet } from '@daxlto/accounting-api-client-angular';
-import { WalletService } from '@daxlto/accounting-api-client-angular/api/wallet.service';
+import { Wallet } from '@aldanetech/accounting-api-client-angular';
+import { WalletService } from '@aldanetech/accounting-api-client-angular/api/wallet.service';
 import axios from 'axios';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { WalletService, Wallet } from '@daxlto/accounting-api-client-angular';
+import { WalletService, Wallet } from '@aldanetech/accounting-api-client-angular';
 
 @Component({
   selector: 'app-form-wallet',

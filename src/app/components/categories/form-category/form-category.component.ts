@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Category, CategoryService } from '@daxlto/accounting-api-client-angular';
+import { Category, CategoryService } from '@aldanetech/accounting-api-client-angular';
 
 @Component({
   selector: 'app-form-category',

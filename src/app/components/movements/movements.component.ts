@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { AccountEntry, AccountEntryService, Wallet, WalletService } from '@daxlto/accounting-api-client-angular';
+import { AccountEntry, AccountEntryService, Wallet, WalletService } from '@aldanetech/accounting-api-client-angular';
 
 @Component({
   selector: 'app-movements',

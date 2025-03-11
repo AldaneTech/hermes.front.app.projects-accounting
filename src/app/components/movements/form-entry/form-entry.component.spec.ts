@@ -1,6 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormEntryComponent } from './form-entry.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { DialogModule } from 'primeng/dialog';
+import { DropdownModule } from 'primeng/dropdown';
+import { ButtonModule } from 'primeng/button';
+import { FormsModule } from '@angular/forms';
 
 describe('FormEntryComponent', () => {
   let component: FormEntryComponent;
@@ -8,7 +14,8 @@ describe('FormEntryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FormEntryComponent]
+      declarations: [FormEntryComponent],
+      imports: [RouterTestingModule, HttpClientTestingModule, DialogModule, DropdownModule, ButtonModule, FormsModule]
     })
     .compileComponents();
     

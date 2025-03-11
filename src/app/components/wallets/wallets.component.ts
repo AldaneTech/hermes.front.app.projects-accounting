@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Wallet, WalletService } from '@daxlto/accounting-api-client-angular';
+import { Wallet, WalletService } from '@aldanetech/accounting-api-client-angular';
 
 @Component({
   selector: 'app-wallets',
