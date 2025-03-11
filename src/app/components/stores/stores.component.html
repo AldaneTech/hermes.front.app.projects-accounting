@@ -1,1 +1,27 @@
-<p>stores works!</p>
+<div class="table">
+    <p-table [value]="stores" class="table" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                <app-form-store (storeCreated)="storeCreated($event)"></app-form-store>
+
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nombre</th>
+                <th>Comentario</th>
+                <th id="cabecera"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-store>
+            <tr>
+                <td>{{ store.name }}</td>
+                <td>{{ store.comment }}</td>
+                <td id="botones">
+                    <p-button (click)="updateStore(store)" class="editButton" class="editButton" icon="pi pi-pencil" [style]="{'background-color': ' #61ca36', 'border-color':' #61ca36'}" ></p-button>
+                    <p-button (click)="deleteStore(store)" icon="pi pi-trash" class="deleteButton" [style]="{'background-color': 'red', 'border-color':'red'}"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
