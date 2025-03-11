@@ -1,4 +1,4 @@
-name: Angular 11 Build & Test
+name: Angular Build & Test
 
 on:
   push:
