@@ -2,7 +2,7 @@
     <p-table [value]="stores" class="table" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="caption">
             <div class="flex align-items-center justify-content-between">
-                <app-form-store (storeCreated)="storeCreated($event)"></app-form-store>
+                <app-form-store [store]="selectedStore" (storeCreated)="storeCreated($event)"></app-form-store>
 
             </div>
         </ng-template>

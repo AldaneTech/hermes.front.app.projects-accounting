@@ -9,15 +9,14 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 export class StoresComponent {
 
   stores: Store[] = [];
-  
+  selectedStore: Store | null = null;
+
   constructor(private storeService: StoreService, private cdr: ChangeDetectorRef){
-    this.storeService.getStores().subscribe((stores) => {
-      this.stores = stores;
-    });
+    this.getStores();
   }
 
   updateStore(store: Store){
-
+    this.selectedStore = store;
   }
 
   deleteStore(store: Store){
@@ -30,8 +29,12 @@ export class StoresComponent {
   }
 
   storeCreated(data: any){
+    this.getStores();
+  }
+
+  getStores() {
     this.storeService.getStores().subscribe((stores) => {
-      this.stores = stores;
+      this.stores = stores.sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
     });
   }
 }
