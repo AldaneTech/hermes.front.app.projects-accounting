@@ -2,7 +2,7 @@
     <p-table [value]="categories" class="table" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="caption">
             <div class="flex align-items-center justify-content-between">
-                <app-form-category (categoryCreated)="categoryCreated($event)"></app-form-category>
+                <app-form-category [category]="selectedCategory" (categoryCreated)="categoryCreated($event)"></app-form-category>
 
             </div>
         </ng-template>

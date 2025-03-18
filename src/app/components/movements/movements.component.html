@@ -18,7 +18,7 @@
     </ng-template>
     <ng-template pTemplate="body" let-entry>
         <tr>
-            <td>{{ entry.amount }}</td>
+            <td>{{ entry.amount.toFixed(2) }}€</td>
             <td>{{ entry.comment }}</td>
             <td>{{ entry.category.name }}</td>
             <td>{{ entry.store?.name }}</td>

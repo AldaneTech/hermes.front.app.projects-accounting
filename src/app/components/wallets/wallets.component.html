@@ -21,7 +21,7 @@
                   'positiveBalance': selectedWallet.budget > 0, 
                   'negativeBalance': selectedWallet.budget <= 0 
                 }">
-                  {{ selectedWallet.budget }}
+                  {{ selectedWallet.budget.toFixed(2) }}
                 </span>€
               </p>
               

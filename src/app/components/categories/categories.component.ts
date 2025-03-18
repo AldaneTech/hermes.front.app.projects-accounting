@@ -9,15 +9,14 @@ import { Category, CategoryService } from '@aldanetech/accounting-api-client-ang
 export class CategoriesComponent {
 
   categories: Category[] = [];
-  
+  selectedCategory: Category | null = null;
+
   constructor(private categoryService: CategoryService, private cdr: ChangeDetectorRef){
-    this.categoryService.getCategories().subscribe((categories) => {
-      this.categories = categories;
-    });
+    this.getCategories();
   }
 
   updateCategory(category: Category){
-
+    this.selectedCategory = category;
   }
 
   deleteCategory(category: Category){
@@ -30,8 +29,12 @@ export class CategoriesComponent {
   }
 
   categoryCreated(data: any){
+    this.getCategories();
+  }
+
+  getCategories(){
     this.categoryService.getCategories().subscribe((categories) => {
-      this.categories = categories;
+      this.categories = categories.sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
     });
   }
 }
