@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormBrandComponent } from './form-brand.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { TableModule } from 'primeng/table';
 
 describe('FormBrandComponent', () => {
   let component: FormBrandComponent;
@@ -8,7 +13,8 @@ describe('FormBrandComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [FormBrandComponent]
+      declarations: [FormBrandComponent],
+      imports: [HttpClientTestingModule, TableModule, DialogModule, ButtonModule, FormsModule]
     })
     .compileComponents();
     
